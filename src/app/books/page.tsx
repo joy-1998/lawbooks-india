@@ -11,14 +11,10 @@ export const metadata: Metadata = {
     'Browse our comprehensive catalog of 500+ Indian legal treatises across Constitutional Law, Criminal Law (BNS/IPC), Civil Procedure, Corporate Law, and Taxation.',
 };
 
-export default function BooksPage({
-  searchParams,
-}: {
-  searchParams?: { q?: string; category?: string };
-}) {
+export default function BooksPage() {
   const books = getAllBooks();
-  const initialSearch = searchParams?.q || '';
-  const initialCategory = searchParams?.category || 'All';
+  const initialSearch = '';
+  const initialCategory = 'All';
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] py-8 sm:py-12">
